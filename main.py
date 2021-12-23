@@ -1,0 +1,71 @@
+import pytest
+
+def somar_dois_numeros(num1, num2):
+    return num1 + num2
+
+def subtrair_dois_numeros(num1, num2):
+    return num1 - num2
+
+def multiplicar_dois_numeros(num1, num2):
+    return num1 * num2
+
+def dividir_dois_numeros(num1, num2):
+    try:
+        return num1 / num2
+    except ZeroDivisionError:
+        return 'Não é possível dividir por zero'
+
+def elevar_um_numero_pelo_outro(num1, num2):
+    return num1 ** num2
+
+
+def calcular_area_do_circulo(raio):
+    try:
+        return 3.14 * raio ** 2
+    except TypeError:
+        return 'Falha no calculo - Raio não é um número'
+
+
+if __name__ == '__main__':
+    resultado = somar_dois_numeros(5,7)
+    print (f' A soma é {resultado}')
+
+    resultado = subtrair_dois_numeros(7,5)
+    print (f' A subtração é {resultado}')
+
+    resultado = multiplicar_dois_numeros(3,5)
+    print (f' A multiplicação é {resultado}')
+
+    resultado = dividir_dois_numeros(8,0)
+    print (f' A multiplicação é {resultado}')
+
+    resultado = elevar_um_numero_pelo_outro(2,3)
+    print(f'A exponeciação é  {resultado}')
+
+
+    #Cliente/Teste
+def testar_somar_dois_numeros():
+    # 1º Etapa: Configura / Prepara
+    # Dados / Valores
+    # Entrada / Input
+    num1 = 8
+    num2 = 9
+    # Saída / Output
+    resultado_esperado = 17
+
+    # 2º Etapa: Executa
+    resultado_atual = somar_dois_numeros(num1, num2)
+
+    # 3º Etapa: Confirma
+    assert resultado_atual == resultado_esperado
+    
+# calcular e testar a área de um quadrado 
+# Area - Lado
+# calcular e testar a parea de um retangulo
+# Area = Lado1 * Lado2
+# Calcular e testar a área de um triangulo
+# Area = Kadi1 Lado2 / 2
+# Calcular e testar a área de um circulo
+# Area = Pi * raio  ** 2
+
+#Oiiiiiiiiiiiiiii
