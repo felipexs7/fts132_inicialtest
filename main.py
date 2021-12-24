@@ -25,6 +25,9 @@ def calcular_area_do_circulo(raio):
     except TypeError:
         return 'Falha no calculo - Raio não é um número'
 
+def calcular_volume_do_paralelograma(largura, comprimento, altura):
+    return largura * comprimento * altura
+
 
 if __name__ == '__main__':
     resultado = somar_dois_numeros(5,7)
@@ -58,7 +61,7 @@ def testar_somar_dois_numeros():
 
     # 3º Etapa: Confirma
     assert resultado_atual == resultado_esperado
-    
+
 # calcular e testar a área de um quadrado 
 # Area - Lado
 # calcular e testar a parea de um retangulo
@@ -67,5 +70,3 @@ def testar_somar_dois_numeros():
 # Area = Kadi1 Lado2 / 2
 # Calcular e testar a área de um circulo
 # Area = Pi * raio  ** 2
-
-#Oiiiiiiiiiiiiiii
